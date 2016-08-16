@@ -17,7 +17,7 @@ function create_site_config {
     cat > /etc/nginx/sites-available/${inbound[0]}.conf <<EOF
 server {
   listen ${inbound[1]};
-  server ${inbound[0]};
+  server_name ${inbound[0]};
 
   location / {
     proxypass http://${proxy_map_array[1]};
