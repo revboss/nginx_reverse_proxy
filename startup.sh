@@ -16,11 +16,11 @@ function create_site_config {
     IFS=" "
     cat > /etc/nginx/sites-available/${inbound[0]}.conf <<EOF
 server {
-  listen ${inbound[1]}
-  server ${inbound[0]}
+  listen ${inbound[1]};
+  server ${inbound[0]};
 
   location / {
-    proxypass http://${proxy_map_array[1]}
+    proxypass http://${proxy_map_array[1]};
   }
 }
 EOF
