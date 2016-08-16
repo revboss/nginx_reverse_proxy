@@ -20,7 +20,7 @@ server {
   server_name ${inbound[0]};
 
   location / {
-    proxypass http://${proxy_map_array[1]};
+    proxy_pass http://${proxy_map_array[1]};
   }
 }
 EOF
